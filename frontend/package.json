@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:landing": "esbuild src/api/landing-service.ts --bundle --format=esm --outfile=tests/landing-service.bundle.js && node tests/landing.test.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

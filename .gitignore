@@ -85,3 +85,6 @@ desktop.ini
 *.db
 *.pid
 *.seed
+
+# 无头测试打包产物
+frontend/tests/landing-service.bundle.js

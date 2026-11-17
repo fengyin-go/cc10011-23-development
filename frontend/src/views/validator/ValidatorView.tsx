@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { downloadEntries, listEntries, moduleMeta, runAction as applyAction } from '@/api/local-service'
 import type { EntryRow } from '@/data/types'
+import LandingVerifyPanel from './LandingVerifyPanel'
 
 const meta = moduleMeta('validator')
 const columns = [
@@ -155,6 +156,8 @@ export default function ValidatorView() {
         <span>共 {total} 条结果校验记录</span>
         {errorMessage && <span className="error-text">{errorMessage}</span>}
       </footer>
+
+      <LandingVerifyPanel />
     </section>
   )
 }

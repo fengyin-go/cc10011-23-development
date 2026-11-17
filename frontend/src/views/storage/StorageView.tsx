@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { downloadEntries, listEntries, moduleMeta, runAction as applyAction } from '@/api/local-service'
 import type { EntryRow } from '@/data/types'
+import LandingConsole from './LandingConsole'
 
 const meta = moduleMeta('storage')
 const columns = [
@@ -155,6 +156,8 @@ export default function StorageView() {
         <span>共 {total} 条数据落盘记录</span>
         {errorMessage && <span className="error-text">{errorMessage}</span>}
       </footer>
+
+      <LandingConsole />
     </section>
   )
 }
